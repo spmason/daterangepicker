@@ -1,9 +1,11 @@
 define([
+    'jquery',
     'sinon',
-    'moment',
-    'lib/daterangepicker/daterangepicker',
-    'lib/daterangepicker/daterangepicker.timesupport'
+    'moment-timezone',
+    '../lib/daterangepicker/daterangepicker',
+    '../lib/daterangepicker/daterangepicker.timesupport'
 ], function(
+    $,
     sinon,
     moment,
     daterangepicker,
