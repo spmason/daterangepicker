@@ -6,11 +6,11 @@
     "type": "git",
     "url": "git://github.com/BrandwatchLtd/daterangepicker.git"
   },
+  "main": "lib/daterangepicker/daterangepicker",
   "scripts": {
     "test": "./unitTests",
-    "postinstall": "bower install",
-    "start": "echo Visit http://localhost:9009/test/ to run unit tests, http://localhost:9009/demo/ to run demo; serve -p 9009",
-    "version": "node update-bower-version.js && git add bower.json"
+    "build": "webpack --display-error-details",
+    "start": "echo Visit http://localhost:9009/test/ to run unit tests, http://localhost:9009/demo/ to run demo; serve -p 9009"
   },
   "licenses": [
     {
@@ -18,20 +18,22 @@
       "url": "http://www.opensource.org/licenses/mit-license.php"
     }
   ],
-  "dependencies": {},
+  "dependencies": {
+    "timepicker": "https://github.com/spmason/timepicker.git#c89b18e1",
+    "jquery": "~3.1.0",
+    "underscore": "~1.8.3",
+    "moment": "~2.10.3",
+    "moment-timezone": "~0.5.11",
+    "webpack": "^3.10.0"
+  },
   "devDependencies": {
     "sinon": "~1.17.4",
     "mocha": "~2.5.3",
     "phantomjs-prebuilt": "~2.1.7",
     "serve": "~1.4.0",
     "testem": "~1.9.0",
-    "bower": "~1.7.9"
-  },
-  "optionalDependencies": {},
-  "volo": {
-    "dependencies": {
-      "jquery": "jquery/jquery",
-      "underscore": "documentcloud/underscore"
-    }
+    "expectations": "~0.6.0",
+    "requirejs": "~2.1.14",
+    "bootstrap": "~3.1.1"
   }
 }
